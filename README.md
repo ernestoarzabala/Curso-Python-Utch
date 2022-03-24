@@ -91,14 +91,15 @@ file.handle.close()
 
 ```
 
-#### Ejemplo de lectura de un archivo de texto
-
 ```
 str_con_texto_a_agregar = 'Texto agregado al archivo de texto'
 file_handle = open('datos.txt','a')
 file_handle.write(str_con_texto_a_agregar)
 file_handle.close()
 ```
+
+#### Ejemplo de lectura de un archivo de texto
+
 
 ```
 datos_leidos = []
@@ -128,7 +129,45 @@ string_con_bytes_texto = file_handle.read(10)
 file_handle.close()
 string_con_bytes_texto
 ```
+#### Archivos de Valores Separados por Coma (.csv)
 
+Los archivos de Valores Separados por Coma (CSV) son en realidad archivos de texto.
+
+```
+file_handle = open(''radiation_dose.csv','r')
+lineas_de_texto = file_handle.readlines()
+file_handle.close()
+encabezado = lineas_de_texto[0].strip().split(',')
+encabezado
+for linea_texto in lineas_de_texto[1:]:
+    datos = linea_texto.strip().split(',')
+    print(datos[0],float(datos[1]),float(datos[2]))
+```
+
+```
+import csv
+
+file_handle = open('radiation_dose.csv','r')
+lector_csv = csv.reader(file_handle)
+for renglon_datos in lector_csv:
+    print(renglon_datos)
+file_handle.close()
+```
+
+```
+import csv
+
+file_handle = open('radiation_dose.csv','r')
+lector_dict_csv = csv.DictReader(file_handle)
+for renglon_datos in lector_dict_csv:
+    print(renglon_datos)
+file_handle.close()
+```
+
+#### Archivos binarios
+
+Aspectos a tener en cuenta cuando se utilizan archivos binarios:
+-
 
 ### Introducción a la OOP
 
