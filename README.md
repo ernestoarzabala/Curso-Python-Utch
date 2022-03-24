@@ -33,7 +33,7 @@
 ### Manejo de Archivos de texto en Python (parte 1): Open, Write
 
 Los archivos de texto con extensión **txt** son archivos sin una estructura interna específica.
-Archivos de texto con extensión como **.csv .doc .json .xml ** son archivos de texto que tienen una estrucutra interna especifica que hay que conocer para poder trabajar con ellos.
+Archivos de texto con extensión como **.csv .doc .json .xml** son archivos de texto que tienen una estrucutra interna especifica que hay que conocer para poder trabajar con ellos.
 
 El manejo de los archivos de texto con extensión **txt** usualmente es más sencillo debido a que contienen lo que se denomina texto plano.
 
@@ -50,9 +50,7 @@ La función ***open()*** realiza las siguientes tareas o acciones:
 Una llamada a la función ***open()*** no lee ni carga en la memoria alguna parte del texto contenido en el archivo, tampoco escribe o vacia de la memoria algun texto hacia el archivo, o cierra el archivo. Todas las acciones anteriores se deben de realizar de manera **explicita por medio de los metodos del _file handle_*
 
 '''
-
 file_handle = open('elarchivodetexto.txt')
-
 '''
 
 | Metodo | Descripción |
