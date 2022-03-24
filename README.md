@@ -74,7 +74,7 @@ La función ***open()***por defecto abre los archivos en modo *solo lectura*. La
 | 'a' | Agregar (Append). Si el archivo existe lo abre para escritura pero no borra el contenido actual del mismo; si el archivo no existe lo crea y lo abre para escritura. Posición inicial al final del archivo.
 | '+' | Actualizar (Update). Abre el archivo para realizar escritura y lectura, puede ser combinada con otras banderas; no borra el contenido actual del archivo. Posición inicial *pos=0*
 
-*# Día 3 - Programación Orientada a Objetos  (OOP) en Python
+# Día 3 - Programación Orientada a Objetos  (OOP) en Python
 
 ### Manejo de Archivos de texto en Python (part 2): Read
 

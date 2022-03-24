@@ -1,0 +1,12 @@
+source,dose (Sv),dose (BED)
+eating a banana,1.0E-7,1
+arm x-ray,1.0e-6,10
+dental x-ray,5.0e-6,50
+one day natural background,1.0e-5,100
+flight from LA to New york,4.e-5,400
+mammogram,4e-4,4000
+head CT scan,2.0e-3,20000
+chest CT scan,7.0e-3,70000
+max yearly radiation worker dose,5.0e-2,5e5
+lowest yearly dose linked to cancer,0.1,1e6
+usually fatal dase,4.0,4e7
