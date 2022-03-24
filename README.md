@@ -49,9 +49,9 @@ La función ***open()*** realiza las siguientes tareas o acciones:
 
 Una llamada a la función ***open()*** no lee ni carga en la memoria alguna parte del texto contenido en el archivo, tampoco escribe o vacia de la memoria algun texto hacia el archivo, o cierra el archivo. Todas las acciones anteriores se deben de realizar de manera **explicita por medio de los metodos del _file handle_*
 
-'''
+```
 file_handle = open('elarchivodetexto.txt')
-'''
+```
 
 | Metodo | Descripción |
 | ------ | ----------- |
@@ -65,9 +65,41 @@ file_handle = open('elarchivodetexto.txt')
 | file_handle.close() | Cierra el archivo y libera los recursos de memoria asociados con el mismo |
 
 
-## Día 3 - Programación Orientada a Objetos  (OOP) en Python
+La función ***open()***por defecto abre los archivos en modo *solo lectura*. Las siguientes son las banderas que se pueden especificar para abrir un archivo en distintos modos:
+
+| Bandera | Modo |
+| ------- | ---- |
+| 'r' | Solo lectura. Posicioón inicial *pos=0*
+| 'w' | Solo escritura. Si el archivo no existe, lo crea; si el archivo existe, el contenido actual se borra para escribir nuevo contenido. Posición inicial *pos=0*
+| 'a' | Agregar (Append). Si el archivo existe lo abre para escritura pero no borra el contenido actual del mismo; si el archivo no existe lo crea y lo abre para escritura. Posición inicial al final del archivo.
+| '+' | Actualizar (Update). Abre el archivo para realizar escritura y lectura, puede ser combinada con otras banderas; no borra el contenido actual del archivo. Posición inicial *pos=0*
+
+*# Día 3 - Programación Orientada a Objetos  (OOP) en Python
 
 ### Manejo de Archivos de texto en Python (part 2): Read
+
+#### Ejemplo de escritura a un archivo de texto
+
+```
+file_handle = open('datos.txt','r+')
+datos_originales = file_handle.read()
+file_handle.seek(0)
+file_handle.write('1,2,3,4\n')
+file_handle.write(datos_originales)
+file_handle.write('\n9,9,9,9')
+file.handle.close()
+
+```
+
+#### Ejemplo de lectura de un archivo de texto
+
+datos_leidos = []
+with open('datos.txt') as file_handle:
+    for linea_de_texto in file_handle.readlines():
+        datos_numericos = [int(x) for x in linea_de_texto.split(',')]
+        datos_leidos.append(datos_numericos)
+
+
 
 ### Introducción a la OOP
 
