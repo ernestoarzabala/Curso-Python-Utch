@@ -93,12 +93,41 @@ file.handle.close()
 
 #### Ejemplo de lectura de un archivo de texto
 
+```
+str_con_texto_a_agregar = 'Texto agregado al archivo de texto'
+file_handle = open('datos.txt','a')
+file_handle.write(str_con_texto_a_agregar)
+file_handle.close()
+```
+
+```
 datos_leidos = []
 with open('datos.txt') as file_handle:
     for linea_de_texto in file_handle.readlines():
         datos_numericos = [int(x) for x in linea_de_texto.split(',')]
         datos_leidos.append(datos_numericos)
+```
 
+```
+file_handle = open('datos.txt'.'r')
+lista_con_lineas_de_texto = file_handle.readlines()
+file_handle.close()
+lista_con_lineas_de_texto
+```
+
+```
+file_handle = open('datos.txt','r')
+string_con_todas_lineas_de_texto = file_handle.read()
+file_handle.close()
+string_con_todas_lineas_de_texto
+```
+
+```
+file_handle = open('datos.txt','r')
+string_con_bytes_texto = file_handle.read(10)
+file_handle.close()
+string_con_bytes_texto
+```
 
 
 ### Introducción a la OOP
