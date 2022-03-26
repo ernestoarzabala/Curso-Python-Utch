@@ -13,6 +13,8 @@ class Fraccion:
             ¡El constructor se enloquece si el denominador es cero! 
             Nota mental:Agregar manejo de error para denominador igual a cero.
         """
+        numerador = int(numerador)
+        denominador = int(denominador)
         hcf = gcd(numerador,denominador)
         self.num, self.den = numerador/hcf, denominador/hcf
 
@@ -42,8 +44,17 @@ class Fraccion:
 
 
 if __name__ == "__main__":
-    a = Fraccion(3,7)
-    b = Fraccion(25,56)
+    a = Fraccion(5,12)
+    print(a)
+    b = Fraccion(3,5)
     c = a*b
     c_real = c.a_numero_real()
-    print("Multiplicar la fraccion {} por la fraccion da como resultado la fraccion {} que es equivalente a {}".format(a,b,c,c_real))
+    print("Multiplicar la fraccion {} por la fraccion {} da como resultado la fraccion {} que es equivalente a {}".format(a,b,c,c_real))# Escribe tu código aquí :-)
+
+
+    a = Fraccion(1,2)
+    print(a)
+    b = Fraccion(1,4)
+    c = a+b
+    c_real = c.a_numero_real()
+    print("Sumar la fraccion {} con la fraccion {} da como resultado la fraccion {} que es equivalente a {}".format(a,b,c,c_real))# Escribe tu código aquí :-)
