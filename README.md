@@ -173,6 +173,24 @@ Aspectos a tener en cuenta cuando se utilizan archivos binarios:
 - Ordenamiento de los nibbles dentro de los bytes que representan los valores (*endianness*).
 
 
+Un archivo de imagen podemos decir que son datos binarios codificados de una cierta manera (formato PNG , JPEG , etc.)
+
+Para demostrar la lectura de archivos binarios crearemos una archivo de imagen.
+La imagen tendrá un tamaño de 10x10 pixeles y será solo un cuadro de un solo color (un tono de verde):
+
+```
+from PIL import Image #pip install Pillow
+
+rojo, verde, azul = 31,255,63 # RGB(31,255,63) => Alguna tonalidad del color verde debe ser
+archivo_imagen = Image.new("RGB",(10,10),color=(rojo,verde,azul))
+archivo_imagen.save("imagen.png")
+```
+
+```
+image_file_handle = open('imagen.png','rb')
+image_file_handle.read()
+image_file_handle.close()
+```
 
 
 ### Introducción a la OOP
