@@ -169,6 +169,10 @@ file_handle.close()
 Aspectos a tener en cuenta cuando se utilizan archivos binarios:
 - Cada archivo binario tiene su propio formato de encabezado.
 - Hay que tener en cuenta el ordenamiento de los bytes dentro del archivo (*endianness*). Endianness : little-endian vs BIG-ENDIAN.
+- Tamaño de los datos (8 bits, 16 bits, 32 bits).
+- Ordenamiento de los nibbles dentro de los bytes que representan los valores (*endianness*).
+
+
 
 
 ### Introducción a la OOP
